@@ -28,9 +28,6 @@
   box-shadow: 0 0 10px #0000001a;
   padding: 15px;
 }
-  /* Adjust styles for smaller screens here */
-
-  /* For example, you can make elements stack vertically or reduce font sizes */
   .section-heading {
     font-size: 20px;
     line-height: 26px;
@@ -69,6 +66,7 @@ a{
   background-color: var(--color-febd69);
   color: #131921;
 }
+
 /*Header Part*/
 .header-top-strip
 {
@@ -115,6 +113,33 @@ a{
  background-color: transparent;
  color: var(--color-febd69) !important;
 }
+/*Responsive Part*/
+@media only screen and (max-width: 768px) {
+  .header-upper {
+    padding: 10px; /* Add spacing to the header for better mobile readability */
+  }
+
+  .header-upper.header-upper-links img {
+    width: 20px; /* Decrease image size for mobile */
+    height: 20px;
+  }
+
+  .header-bottomn .menu-links a,
+  .header-bottomn .dropdown button {
+    font-size: 12px; /* Reduce font size for mobile */
+    line-height: 16px;
+  }
+  
+  .header-bottomn .dropdown-menu {
+    transform: translate3d(0px, 47px, 0px) !important; /* Adjust position for mobile */
+  }
+
+  .header-bottomn .dropdown-item {
+    padding: 15px; /* Reduce padding for mobile */
+  }
+}
+/*Responsive Part Ends Here*/
+
 /*Header Part Ender here*/
 
 
@@ -130,6 +155,16 @@ footer .input-group-text{
   background-color: var(--color-232f3e);
   color: white;
   padding: 8px 17px;
+}
+/* Media Query for Mobile Devices (768px and below) */
+@media only screen and (max-width: 768px) {
+  footer {
+    text-align: center; /* Center align content on mobile */
+  }
+
+  footer .input-group-text {
+    padding: 8px 10px; /* Adjust padding for mobile */
+  }
 }
 /* Footer Part End Here */
 
@@ -160,6 +195,32 @@ footer .input-group-text{
   letter-spacing: 0.4;
   color: var(--color-131921);
 
+}
+
+/* Media Query for Mobile Devices (768px and below) */
+@media only screen and (max-width: 768px) {
+  .main-banner-content {
+    top: 10%; /* Adjust position for mobile */
+    left: 0;
+    text-align: center; /* Center align text on mobile */
+  }
+
+  .main-banner-content h4 {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 6px; /* Reduce margin for mobile */
+  }
+
+  .main-banner-content h5 {
+    font-size: 28px; /* Further reduce font size for smaller mobile screens */
+    line-height: 36px; /* Adjust line-height for smaller screens */
+    letter-spacing: -1px;
+  }
+
+  .main-banner-content p {
+    font-size: 12px; /* Further reduce font size for smaller mobile screens */
+    line-height: 18px; /* Adjust line-height for smaller screens */
+  }
 }
 
 .small-banner-content{
@@ -228,6 +289,26 @@ color: var(--color-131921);
 .cateogries>div:nth-child(7){
   border-right: 1px solid var(--color-ededed);
 }
+
+/* Media Query for Mobile Devices (768px and below) */
+@media only screen and (max-width: 768px) {
+  .cateogries {
+    width: 100%; /* Expand to full width on mobile */
+    text-align: center;
+    display: flex; /* Center align content on mobile */
+  }
+
+  .cateogries>div {
+    width: 50%; /* Expand to full width on mobile */
+    padding: 10px; /* Adjust padding for mobile */
+    border-bottom: 1px solid var(--color-ededed); /* Add a border to separate items on mobile */
+    border-right: none; /* Remove right border on mobile */
+  }
+
+  .cateogries>div:last-child {
+    border-bottom: none; /* Remove bottom border for the last item on mobile */
+  }
+}
 /*Cateogries Section End*/
 /*Home Page Part Ends Here*/
 
@@ -279,6 +360,53 @@ color: var(--color-131921);
   font-size: 13px;
   color: var(--color-777777);
 }
+
+/* Media Query for Mobile Devices (768px and below) */
+@media only screen and (max-width: 768px) {
+  .blog-card {
+    border-radius: 0; /* Remove border-radius for mobile */
+    box-shadow: 0 0 10px #0000001a; /* Add shadow for mobile */
+  }
+
+  .blog-card img {
+    border-top-left-radius: 0; /* Remove border radius for mobile */
+    border-top-right-radius: 0; /* Remove border radius for mobile */
+  }
+
+  .blog-content {
+    padding: 10px; /* Reduce padding for mobile */
+  }
+
+  .blog-content p.date {
+    font-size: 12px; /* Decrease font size for mobile */
+    line-height: 18px; /* Adjust line height for mobile */
+  }
+
+  .blog-content h5 {
+    font-size: 16px; /* Decrease font size for mobile */
+  }
+
+  .blog-content p.desc {
+    font-size: 12px; /* Decrease font size for mobile */
+    line-height: 18px; /* Adjust line height for mobile */
+  }
+
+  .single-blog-card a {
+    font-size: 16px; /* Decrease font size for mobile */
+    margin-bottom: 10px; /* Reduce margin for mobile */
+  }
+
+  .single-blog-card h3 {
+    font-size: 20px; /* Decrease font size for mobile */
+    font-weight: 500; /* Adjust font weight for mobile */
+  }
+
+  .single-blog-card p {
+    font-size: 12px; /* Decrease font size for mobile */
+    line-height: 18px; /* Adjust line height for mobile */
+  }
+}
+
 /* Blog part Ends Here*/
 
 /*Product Card*/
