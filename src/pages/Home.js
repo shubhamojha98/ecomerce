@@ -5,6 +5,7 @@ import BlogCard from '../components/BlogCard'
 import ProductCard from '../components/ProductCard'
 import SpecialPrdouct from '../components/SpecialPrdouct'
 import Container from '../components/Container'
+import { services } from '../utils/Data'
 
 
 const Home = () => {
@@ -68,55 +69,28 @@ const Home = () => {
         </div>
   </Container>
 
-    <section className="home-wrapper-2 py-5">
-      <div className="container-xxl">
-        <div className="row">
+  <Container class1="home-wrapper-2 py-5">
+  <div className="row">
           <div className="col-12">
             <div className="services d-flex align-items-center justify-content-between">
-              <div className="d-flex align-items-center gap-15">
-                  <img src="images/service.png" alt="services" />
-                <div>
-                  <h6>Free Shipping</h6>
-                  <p className='mb-0'>From all orders above Rs. 500</p>
+              {services?.map((i,j)=>{
+                return(
+                  <div className="d-flex align-items-center gap-15" key={j}>
+                    <img src={i.image}alt="services" />
+                    <div>
+                      <h6>{i.title}</h6>
+                      <p className="mb-0">{i.tagline}</p>
+                    </div>
                 </div>
-              </div>
-              <div className="d-flex align-items-center gap-15">
-                  <img src="images/service-02.png" alt="services" />
-                <div>
-                  <h6>Daily Surprise Offers</h6>
-                  <p className="mb-0">Save upto 25% off</p>
-                </div>
-              </div>
-              <div className="d-flex align-items-center gap-15">
-                  <img src="images/service-03.png" alt="services" />
-                <div>
-                  <h6>Support 24/7</h6>
-                  <p className="mb-0">Shop with an expert</p>
-                </div>
-              </div>
-              <div className="d-flex align-items-center gap-10">
-                  <img src="images/service-04.png" alt="services" />
-                <div>
-                  <h6>Affordable Prices</h6>
-                  <p className="mb-0">Get Factory Default Price </p>
-                </div>
-              </div>
-              <div className="d-flex align-items-center gap-10">
-                  <img src="images/service-05.png" alt="services" />
-                <div>
-                  <h6>Secure Payment</h6>
-                  <p className="mb-0">100% Protected</p>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>
-      </div>
-    </section>
+  </Container>
 
-    <section className="home-wrapper-3 py-5">
-      <div className="container-xxl">
-        <div className="row">
+  <Container class1="home-wrapper-3 py-5">
+  <div className="row">
           <div className="col-12">
             <div className="cateogries d-flex align-items-center flex-wrap justify-content-between">
               <div className='d-flex align-items-center'>
@@ -178,12 +152,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section className="featured-wrapper py-5 home-wrapper-2">
-      <div className="container-xxl">
-        <div className="row">
+  </Container>
+
+  <Container class1="featured-wrapper py-5 home-wrapper-2">
+  <div className="row">
           <div className="col-12">
             <h3 className="section-heading">Featured Collection</h3>
           </div>
@@ -192,58 +165,55 @@ const Home = () => {
          <ProductCard/>
          <ProductCard/>
         </div>
-      </div>
-    </section>
+  </Container>
 
-    <section className="famous-wrapper py-5 home-wrapper-2">
-      <div className="container-xxl">
-        <div className="row">
-          <div className="col-3">
-            <div className="famous-card img-fluid position-relative">
-              <img src="images/famous-1.1.jpg" className="img-fluid" alt="famous-1" />
-              <div className="famous-content position-absolute">
-              <h5>Big Screen</h5>
-              <h6>Smart Watch Series 7</h6>
-              <p>From Rs.40000 or Rs.2000/mo</p>
-              </div>              
+  <Container class1="famous-wrapper py-5 home-wrapper-2">
+    <div className="row">
+            <div className="col-3">
+              <div className="famous-card img-fluid position-relative">
+                <img src="images/famous-1.1.jpg" className="img-fluid" alt="famous-1" />
+                <div className="famous-content position-absolute">
+                <h5>Big Screen</h5>
+                <h6>Smart Watch Series 7</h6>
+                <p>From Rs.40000 or Rs.2000/mo</p>
+                </div>              
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="famous-card img-fluid position-relative">
+                <img src="images/famous-2.jpg" className="img-fluid" alt="famous-1" />
+                <div className="famous-content position-absolute">
+                <h5>Studio Display</h5>
+                <h6>600Nits of Brightness</h6>
+                <p>27-inch 5K Retina display</p>
+                </div>              
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="famous-card img-fluid position-relative">
+                <img src="images/famous-3.jpg" className="img-fluid" alt="famous-1" />
+                <div className="famous-content position-absolute">
+                <h5 className="text-dark">SmartPhones</h5>
+                <h6 className="text-dark">Iphone 13 pro</h6>
+                <p className="text-dark">From Rs.80000 or Rs.4000/mo </p>
+                </div>              
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="famous-card img-fluid position-relative">
+                <img src="images/famous-4.jpg" className="img-fluid" alt="famous-1" />
+                <div className="famous-content position-absolute">
+                <h5 className="text-dark">HomeSpeakers</h5>
+                <h6 className="text-dark">Room-filling sound</h6>
+                <p className="text-dark">From Rs.8000 or Rs.400/mo </p>
+                </div>              
+              </div>
             </div>
           </div>
-          <div className="col-3">
-            <div className="famous-card img-fluid position-relative">
-              <img src="images/famous-2.jpg" className="img-fluid" alt="famous-1" />
-              <div className="famous-content position-absolute">
-              <h5>Studio Display</h5>
-              <h6>600Nits of Brightness</h6>
-              <p>27-inch 5K Retina display</p>
-              </div>              
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="famous-card img-fluid position-relative">
-              <img src="images/famous-3.jpg" className="img-fluid" alt="famous-1" />
-              <div className="famous-content position-absolute">
-              <h5 className="text-dark">SmartPhones</h5>
-              <h6 className="text-dark">Iphone 13 pro</h6>
-              <p className="text-dark">From Rs.80000 or Rs.4000/mo </p>
-              </div>              
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="famous-card img-fluid position-relative">
-              <img src="images/famous-4.jpg" className="img-fluid" alt="famous-1" />
-              <div className="famous-content position-absolute">
-              <h5 className="text-dark">HomeSpeakers</h5>
-              <h6 className="text-dark">Room-filling sound</h6>
-              <p className="text-dark">From Rs.8000 or Rs.400/mo </p>
-              </div>              
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section className="special-wrapper py-5 home-wrapper-2">
-      <div className="container-xxl">
+  </Container>
+
+  <Container className="special-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
             <h3 className="section-heading">Special Product</h3>
@@ -255,11 +225,9 @@ const Home = () => {
           <SpecialPrdouct/>
           <SpecialPrdouct/>
         </div>
-      </div>
-    </section>
+  </Container>
 
-    <section className="popular-wrapper py-5 home-wrapper-2">
-      <div className="container-xxl">
+    <Container class1="popular-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
             <h3 className="section-heading">Our Popular Products</h3>
@@ -271,11 +239,9 @@ const Home = () => {
          <ProductCard/>
          <ProductCard/>
         </div>
-      </div>
-    </section>
+    </Container>
 
-    <section className="marque-wrapper home-wrapper-2 py-5">
-      <div className="container-xxl">
+    <Container className="marque-wrapper home-wrapper-2 py-5">
         <div className="row">
           <div className="col-12">
             <div className="marquee-inner-wrapper card-wrapper">
@@ -308,11 +274,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+    </Container>
     
-    <section className="blog-wrapper py-5 home-wrapper-2">
-      <div className="container-xxl">
+    <Container className="blog-wrapper py-5 home-wrapper-2">   
         <div className="row">
           <div className="col-12">
             <h3 className="section-heading">Our Latest Blogs</h3>
@@ -332,8 +296,7 @@ const Home = () => {
           <BlogCard/>
           </div>
         </div>
-      </div>
-    </section>
+    </Container>
   </>
   )
 }
