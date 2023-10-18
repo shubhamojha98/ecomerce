@@ -4,7 +4,7 @@ import{BsSearch} from 'react-icons/bs';
 const Header = () => {
   return (
     <>
-<div id='head'>
+
     <header className="header-top-strip py-3">
         <div className="container-xxl">
             <div className="row">
@@ -26,7 +26,8 @@ const Header = () => {
             <div className="row align-items-center" >
                 <div className="col-2">
                     <h2>
-                        <Link className="text-white">Bazzar.com</Link></h2>
+                        <Link to ='/' className="text-white">Bazzar.com</Link>
+                    </h2>
                 </div>
                 <div className="col-5">
                     <div class="input-group">
@@ -75,7 +76,7 @@ const Header = () => {
             </div>
         </div>
     </header>
-    </div>
+
     <header className="header-bottomn py-3">
         <div className="container-xxl">
             <div className="row">
