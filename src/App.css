@@ -113,11 +113,16 @@ a{
  background-color: transparent;
  color: var(--color-febd69) !important;
 }
+
 /*Responsive Part*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1150px) {
   .header-upper {
     padding: 10px; /* Add spacing to the header for better mobile readability */
   }
+
+   .col-2, .col-5{
+    width: 100%;
+   }
 
   .header-upper.header-upper-links img {
     width: 20px; /* Decrease image size for mobile */
