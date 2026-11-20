@@ -15,12 +15,38 @@
     "react-image-zoom": "^1.3.1",
     "react-rating-stars-component": "^2.2.0",
     "react-redux": "^8.1.1",
-    "react-router-dom": "^6.14.0",
+    "react-router-dom": "^7.18.6",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "engines": {
+    "node": ">=20"
+  },
+  "overrides": {
+    "react-scripts": {
+      "@svgr/webpack": "8.1.0",
+      "resolve-url-loader": "5.0.0",
+      "webpack-dev-server": "5.2.7",
+      "workbox-webpack-plugin": "7.4.1"
+    },
+    "css-minimizer-webpack-plugin": {
+      "serialize-javascript": "7.1.3"
+    },
+    "jsdom": {
+      "http-proxy-agent": "5.0.0"
+    },
+    "sockjs": {
+      "uuid": "11.1.1"
+    },
+    "webpack-dev-server": {
+      "webpack-dev-middleware": "7.4.5"
+    },
+    "workbox-build": {
+      "glob": "14.0.2"
+    }
+  },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node tooling/start.cjs",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
